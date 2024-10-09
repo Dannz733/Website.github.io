@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome (Opsional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papPjf0ZJix8t6B96GL1fhGK1+UrNafE2P+eEovVPOaTrW7RLnqh4fJVEbd2/YfJAGCyc1B+IJiZQ7CenIaeGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link ke File CSS Eksternal -->
+    <link rel="stylesheet" href="css/styles2.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Form Input Data</h2>
+        <form action="process.php" method="POST">
+            <!-- Input Teks -->
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+
+            <!-- Input Pilihan (Select) -->
+            <label for="pekerjaan">Pekerjaan:</label>
+            <select id="pekerjaan" name="pekerjaan">
+                <option value="Pelajar">Pelajar</option>
+                <option value="Pegawai">Pegawai</option>
+                <option value="Wirausaha">Wirausaha</option>
+            </select>
+
+            <!-- Input Checkbox -->
+            <label for="hobi">Hobi:</label>
+            <div class="checkbox-group">
+                <label for="hobi1">
+                    <input type="checkbox" id="hobi1" name="hobi[]" value="Membaca">
+                    Membaca
+                </label>
+                <label for="hobi2">
+                    <input type="checkbox" id="hobi2" name="hobi[]" value="Olahraga">
+                    Olahraga
+                </label>
+                <label for="hobi3">
+                    <input type="checkbox" id="hobi3" name="hobi[]" value="Menulis">
+                    Menulis
+                </label>
+            </div>
+
+            <!-- Komentar -->
+            <label for="Komentar">Komentar:</label>
+            <textarea id="Komentar" name="Komentar" rows="4" placeholder="Tulis komentar Anda di sini" required></textarea>
+
+            <!-- Tombol Submit -->
+            <input type="submit" value="Kirim">
+        </form>
+
+        <a href="read.php" class="back-link">Lihat Data</a>
+    </div>
+</body>
+</html>
